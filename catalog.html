@@ -9,9 +9,9 @@
       <div class="header-top-block">
         <a class="main-header-logo" href="index.html">
           <span class="logotype">Техномарт</span>
-          <!--<img src="" alt="Логотип компании техномарт" width="220" height="47">-->
         </a>
-        <p>Поиск</p>
+        <label for="searching">Поиск</label>
+        <input type="search" id="searching">
         <ul>
           <li><a href="#">Закладки: 0</a></li>
           <li class="cart-active"><a href="#">Корзина: 10</a></li>
@@ -19,17 +19,16 @@
         <a class="button active-button" href="#">Оформить заказ</a>
       </div>
       <div class="header-user-block">
-        <a class="" href="index.html">
-          <p>Интернет магазин строительных материалов и инструментов для ремонта</p>
-        </a>
+        <p>Интернет магазин строительных материалов и инструментов для ремонта</p>
         <address class="header-contacts">
           <a class="header-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
         <div class="user-block">
-          <p class="username">
-            Равшан Джамшутович
-          </p>
+          <div class="username">
+            <a href="#">Равшан Джамшутович</a>
+            <a href="#">Выход</a>
+          </div>
           <ul class="user-list">
             <li><a href="#">Мои заказы</a></li>
             <li><a href="#">Личный кабинет</a></li>
@@ -82,88 +81,71 @@
             <input type="radio" name="power" value="cabel" id="cabel">
             <label for="cabel">Сетевые</label>
           </fieldset>
-          <input type="submit" value="Показать">
+          <button type="submit">Показать</button>
         </section>
         <section class="sorting">
           <h3 class="title-sorting">Сортировка:</h3>
-
         </section>
         <section class="catalog-perforator">
           <ul class="catalog-perforator-list">
             <li class="catalog-perforator-item">
-              <h3>
-                <span>Перфоратор Bosh</span>
-                <span>BFG 3000</span>
-              </h3>
+              <h3>Перфоратор Bosh BFG 3000</h3>
               <img src="" alt="Перфоратор Bosh модель BFG 3000" width="150" height="150">
-              <p class="old-price">22500 р.</p>
-              <div class="price">
-                15500 р.
-              </div>
+              <del class="old-price">22500 р.</del>
+              <p class="price">15500 р.</p>
             </li>
             <li class="catalog-perforator-item">
-              <h3>
-                <span>Перфоратор Bosh</span>
-                <span>BFG 6000</span>
-              </h3>
+              <h3>Перфоратор Bosh BFG 6000</h3>
               <img src="" alt="Перфоратор Bosh модель BFG 6000" width="150" height="150">
-              <p class="old-price">30500 р.</p>
-              <div class="price">
-                25500 р.
-              </div>
+              <del class="old-price">30500 р.</del>
+              <p class="price">25500 р.</p>
             </li>
             <li class="catalog-perforator-item">
-              <h3>
-                <span>Перфоратор Bosh</span>
-                <span>BFG 2000</span>
-              </h3>
-              <img class="new-label" src="" alt="Новинка" width="" height="">
-              <!--<img src="" alt="Перфоратор Bosh модель BFG 3000" width="150" height="150">-->
-              <!--<p class="old-price">22500 р</p>-->
-              <span class="button-buy">Купить</span>
-              <span class="button-marker">В закладки</span>
-              <div class="price">
-                12500 р.
-              </div>
+              <h3>Перфоратор Bosh BFG 2000</h3>
+              <p class="new-label">New</p>
+              <button class="button-buy">Купить</button>
+              <button class="button-marker">В закладки</button>
+              <p class="price">12500 р.</p>
             </li>
             <li class="catalog-perforator-item">
-              <h3>
-                <span>Перфоратор Bosh</span>
-                <span>BFG 3000</span>
-              </h3>
+              <h3>Перфоратор Bosh BFG 3000</h3>
               <img src="" alt="Перфоратор Bosh модель BFG 3000" width="150" height="150">
-              <p class="old-price">22500 р.</p>
-              <div class="price">
-                15500 р.
-              </div>
+              <del class="old-price">22500 р.</del>
+              <p class="price">15500 р.</p>
             </li>
             <li class="catalog-perforator-item">
-              <h3>
-                <span>Перфоратор Bosh</span>
-                <span>BFG 6000</span>
-              </h3>
-              <img class="new-label" src="" alt="Новинка" width="" height="">
+              <h3>Перфоратор Bosh BFG 6000</h3>
+              <p class="new-label">New</p>
               <img src="" alt="Перфоратор Bosh модель BFG 6000" width="150" height="150">
-              <p class="old-price">30500 р.</p>
-              <div class="price">
-                25500 р.
-              </div>
+              <del class="old-price">30500 р.</del>
+              <p class="price">25500 р.</p>
             </li>
             <li class="catalog-perforator-item">
-              <h3>
-                <span>Перфоратор Bosh</span>
-                <span>BFG 2000</span>
-              </h3>
+              <h3>Перфоратор Bosh BFG 2000</h3>
               <img src="" alt="Перфоратор Bosh модель BFG 2000" width="150" height="150">
-              <!--<p class="old-price">22500 р.</p>-->
-              <div class="price">
-                12500 р.
-              </div>
+              <p class="price">12500 р.</p>
             </li>
-            <!--еще 3 перфоратора-->
+            <li class="catalog-perforator-item">
+              <h3>Перфоратор Bosh BFG 3000</h3>
+              <p class="new-label">New</p>
+              <img src="" alt="Перфоратор Bosh модель BFG 3000" width="150" height="150">
+              <del class="old-price">22500 р.</del>
+              <p class="price">15500 р.</p>
+            </li>
+            <li class="catalog-perforator-item">
+              <h3>Перфоратор Bosh BFG 6000</h3>
+              <img src="" alt="Перфоратор Bosh модель BFG 6000" width="150" height="150">
+              <del class="old-price">30500 р.</del>
+              <p class="price">25500 р.</p>
+            </li>
+            <li class="catalog-perforator-item">
+              <h3>Перфоратор Bosh BFG 2000</h3>
+              <img src="" alt="Перфоратор Bosh модель BFG 2000" width="150" height="150">
+              <p class="price">12500 р.</p>
+            </li>
           </ul>
           <ul class="paginator-list">
-            <li class="paginator-item paginator-item-current"><a>1</a></li>
+            <li class="paginator-item paginator-item-current">1</li>
             <li class="paginator-item"><a href="#">2</a></li>
             <li class="paginator-item"><a href="#">3</a></li>
             <li class="paginator-item"><a href="#">Следующая</a></li>
@@ -176,8 +158,7 @@
           <dt class="term">Перфоратор</dt>
           <dd class="definition">
             - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне
-            и
-            камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять
+            и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять
             функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном
             устройстве будут совмещены отбойный молоток и ударная дрель.
           </dd>
