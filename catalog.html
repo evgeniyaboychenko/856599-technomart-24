@@ -10,7 +10,7 @@
         <a class="main-header-logo" href="index.html">
           <span class="logotype">Техномарт</span>
         </a>
-        <label for="searching">Поиск</label>
+        <label for="searching">Поиск:</label>
         <input type="search" id="searching">
         <ul>
           <li><a href="#">Закладки: 0</a></li>
@@ -60,32 +60,44 @@
         <h2 class="subtitle">Перфораторы</h2>
         <section class="filters">
           <h3 class="title-filter">Фильтр:</h3>
-          <!-- тут будет форма фильтра цены -->
-          <fieldset class="manufacturers-list">
-            <legend class="manufacturers-list-title">Производители:</legend>
-            <input type="checkbox" name="bosh" id="bosh" checked>
-            <label for="bosh">Bosh</label>
-            <input type="checkbox" name="interskop" id="interskop">
-            <label for="interskop">Интерскоп</label>
-            <input type="checkbox" name="makita" id="makita" checked>
-            <label for="makita">Makita</label>
-            <input type="checkbox" name="dewalt" id="dewalt">
-            <label for="dewalt">Dewalt</label>
-            <input type="checkbox" name="hitachi" id="hitachi">
-            <label for="hitachi">Hitachi</label>
-          </fieldset>
-          <fieldset class="power-list">
-            <legend class="power-list-title">Питание:</legend>
-            <input type="radio" name="power" value="buttery" id="buttery" checked>
-            <label for="buttery">Аккумуляторные</label>
-            <input type="radio" name="power" value="cabel" id="cabel">
-            <label for="cabel">Сетевые</label>
-          </fieldset>
-          <button type="submit">Показать</button>
+          <form>
+            <fieldset class="price-list">
+              <legend class="price-list-title">Цена:</legend>
+              <span>Бегунок</span>
+              <span>min цена - max цена </span>
+            </fieldset>
+            <fieldset class="manufacturers-list">
+              <legend class="manufacturers-list-title">Производители:</legend>
+              <input type="checkbox" name="bosh" id="bosh" checked>
+              <label for="bosh">Bosh</label>
+              <input type="checkbox" name="interskop" id="interskop">
+              <label for="interskop">Интерскоп</label>
+              <input type="checkbox" name="makita" id="makita" checked>
+              <label for="makita">Makita</label>
+              <input type="checkbox" name="dewalt" id="dewalt">
+              <label for="dewalt">Dewalt</label>
+              <input type="checkbox" name="hitachi" id="hitachi">
+              <label for="hitachi">Hitachi</label>
+            </fieldset>
+            <fieldset class="power-list">
+              <legend class="power-list-title">Питание:</legend>
+              <input type="radio" name="power" value="buttery" id="buttery" checked>
+              <label for="buttery">Аккумуляторные</label>
+              <input type="radio" name="power" value="cabel" id="cabel">
+              <label for="cabel">Сетевые</label>
+            </fieldset>
+            <button type="button">Показать</button>
+          </form>
         </section>
-        <section class="sorting">
+        <div class="sorting">
           <h3 class="title-sorting">Сортировка:</h3>
-        </section>
+          <!--это будут кнопки-->
+          <span>По цене</span>
+          <span>По типу</span>
+          <span>По функционалу</span>
+          <span>По убыванию</span>
+          <span>По возрастанию</span>
+        </div>
         <section class="catalog-perforator">
           <ul class="catalog-perforator-list">
             <li class="catalog-perforator-item">
