@@ -10,8 +10,10 @@
         <a class="main-header-logo" href="index.html">
           <span class="logotype">Техномарт</span>
         </a>
-        <label for="searching">Поиск:</label>
-        <input type="search" id="searching">
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label for="searching">Поиск:</label>
+          <input type="search" id="searching">
+        </form>
         <ul>
           <li><a href="#">Закладки: 0</a></li>
           <li class="cart-active"><a href="#">Корзина: 10</a></li>
@@ -50,7 +52,7 @@
     </header>
     <main>
       <section>
-        <h1 class="visual-hidden">Каталог перфораторов компании Техномарт</h1>
+        <h1 class="visually-hidden">Каталог перфораторов компании Техномарт</h1>
         <ul class="breadcrumbs">
           <li><a href="index.html">Главная</a></li>
           <li><a href="#">Каталог</a></li>
@@ -60,43 +62,87 @@
         <h2 class="subtitle">Перфораторы</h2>
         <section class="filters">
           <h3 class="title-filter">Фильтр:</h3>
-          <form>
+          <form action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="price-list">
               <legend class="price-list-title">Цена:</legend>
-              <span>Бегунок</span>
-              <span>min цена - max цена </span>
+              <!--Бегунок-->
+              <input type="text" value="0;30000" id="price">
+              <output name="minPrice" for="price">0</output>
+              <output name="maxPrice" for="price">30000</output>
             </fieldset>
             <fieldset class="manufacturers-list">
               <legend class="manufacturers-list-title">Производители:</legend>
-              <input type="checkbox" name="bosh" id="bosh" checked>
-              <label for="bosh">Bosh</label>
-              <input type="checkbox" name="interskop" id="interskop">
-              <label for="interskop">Интерскоп</label>
-              <input type="checkbox" name="makita" id="makita" checked>
-              <label for="makita">Makita</label>
-              <input type="checkbox" name="dewalt" id="dewalt">
-              <label for="dewalt">Dewalt</label>
-              <input type="checkbox" name="hitachi" id="hitachi">
-              <label for="hitachi">Hitachi</label>
+              <ul>
+                <li>
+                  <input type="checkbox" name="bosh" id="bosh" checked>
+                  <label for="bosh">Bosh</label>
+                </li>
+                <li><input type="checkbox" name="interskop" id="interskop">
+                  <label for="interskop">Интерскоп</label></li>
+                <li>
+                  <input type="checkbox" name="makita" id="makita" checked>
+                  <label for="makita">Makita</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="dewalt" id="dewalt">
+                  <label for="dewalt">Dewalt</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="hitachi" id="hitachi">
+                  <label for="hitachi">Hitachi</label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="power-list">
               <legend class="power-list-title">Питание:</legend>
-              <input type="radio" name="power" value="buttery" id="buttery" checked>
-              <label for="buttery">Аккумуляторные</label>
-              <input type="radio" name="power" value="cabel" id="cabel">
-              <label for="cabel">Сетевые</label>
+              <ul>
+                <li>
+                  <input type="radio" name="power" value="buttery" id="buttery" checked>
+                  <label for="buttery">Аккумуляторные</label>
+                </li>
+                <li>
+                  <input type="radio" name="power" value="cabel" id="cabel">
+                  <label for="cabel">Сетевые</label>
+                </li>
+              </ul>
             </fieldset>
-            <button type="button">Показать</button>
+            <button type="submit">Показать</button>
           </form>
         </section>
         <div class="sorting">
           <h3 class="title-sorting">Сортировка:</h3>
-          <!--это будут кнопки-->
-          <span>По цене</span>
-          <span>По типу</span>
-          <span>По функционалу</span>
-          <span>По убыванию</span>
-          <span>По возрастанию</span>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="sort-list">
+              <legend class="visually-hidden sort-list-title">Сортировка по категории товара</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="sort" value="price" id="price-sort" checked>
+                  <label for="price-sort">По цене</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" value="type" id="type">
+                  <label for="type">По типу</label>
+                </li>
+                <li>
+                  <input type="radio" name="sort" value="function" id="function">
+                  <label for="function">По функционалу</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="sort-order-list">
+              <legend class="visually-hidden sort-order-list-title">Сортировка по убыванию-возрвстанию</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="order" value="ascending" id="ascending" checked>
+                  <label for="ascending">По возрастанию</label>
+                </li>
+                <li>
+                  <input type="radio" name="order" value="descending" id="descending">
+                  <label for="descending">По убыванию</label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
         </div>
         <section class="catalog-perforator">
           <ul class="catalog-perforator-list">
@@ -115,8 +161,8 @@
             <li class="catalog-perforator-item">
               <h3>Перфоратор Bosh BFG 2000</h3>
               <p class="new-label">New</p>
-              <button class="button-buy">Купить</button>
-              <button class="button-marker">В закладки</button>
+              <button class="button-buy" type="button">Купить</button>
+              <button class="button-marker" type="button">В закладки</button>
               <p class="price">12500 р.</p>
             </li>
             <li class="catalog-perforator-item">
@@ -210,7 +256,7 @@
           Все права защищены
         </p>
         <div class="footer-social">
-          <h2 class="visual-hidden">Социальные сети</h2>
+          <h2 class="visually-hidden">Социальные сети</h2>
           <ul>
             <li><a href="#">ВКонтакте</a></li>
             <li><a href="#">Фейсбук</a></li>
@@ -228,4 +274,10 @@
       </div>
     </footer>
   </body>
+  <section class="modal-write-us">
+    <h2>Товар добавлен в корзину!</h2>
+    <a class="button" href="#">Оформить заказ</a>
+    <a class="button" href="#">Продолжить покупки</a>
+    <button type="button">Закрыть</button>
+  </section>
 </html>

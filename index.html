@@ -10,8 +10,10 @@
         <a class="main-header-logo">
           <span class="logotype">Техномарт</span>
         </a>
-        <label for="searching">Поиск:</label>
-        <input type="search" id="searching">
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label for="searching">Поиск:</label>
+          <input type="search" id="searching">
+        </form>
         <ul>
           <li><a href="#">Закладки: 0</a></li>
           <li><a href="#">Корзина: 0</a></li>
@@ -43,7 +45,7 @@
     </header>
     <main class="container">
       <section class="offer">
-        <h2 class="visual-hidden">Спецпредложения</h2>
+        <h2 class="visually-hidden">Спецпредложения</h2>
         <ul class="offer-list">
           <li class="offer-list-item">
             <h3>Материалы</h3>
@@ -74,8 +76,11 @@
           </figcaption>
           <img src="img/drill.jpg" alt="Дрели" width="620" height="266">
         </figure>
-        <span class="slider-button-left">влево</span>
-        <span class="slider-button-right">вправо</span>
+        <button class="slider-button-left" type="button">влево</button>
+        <button class="slider-button-right" type="button">вправо</button>
+        <button class="slider-button-first" type="button">выбрать первый слайд</button>
+        <button class="slider-button-second" type="button">выбрать второй слайд</button>
+        <a class="button" href="#">Открыть каталог</a>
       </section>
       <section class="popular-products">
         <div class="popular-product-header">
@@ -125,10 +130,12 @@
             <a href="#"><img src="img/brands/dewalt.jpg" alt="Логотип производителя Dewalt" width="146" height="44"></a>
           </li>
           <li class="popular-manufacturers-item">
-            <a href="#"><img src="img/brands/interscol.jpg" alt="Логотип производителя Интерскол" width="200" height="88"></a>
+            <a href="#"><img src="img/brands/interscol.jpg" alt="Логотип производителя Интерскол" width="200"
+                             height="88"></a>
           </li>
           <li class="popular-manufacturers-item">
-            <a href="#"><img src="img/brands/hitachi.jpg" alt="Логотип производителя Hitachi" width="169" height="31"></a>
+            <a href="#"><img src="img/brands/hitachi.jpg" alt="Логотип производителя Hitachi" width="169"
+                             height="31"></a>
           </li>
           <li class="popular-manufacturers-item">
             <a href="#"><img src="img/brands/lg.jpg" alt="Логотип производителя LG" width="121" height="73"></a>
@@ -147,9 +154,13 @@
           покупки прятными</p>
         <ul class="service-button-list">
           <li class="service-button-item">
-            <button>Доставка</button>
-            <button>Гарантия</button>
-            <button>Кредит</button>
+            <button type="button">Доставка</button>
+          </li>
+          <li class="service-button-item">
+            <button type="button">Гарантия</button>
+          </li>
+          <li class="service-button-item">
+            <button type="button">Кредит</button>
           </li>
         </ul>
         <h3 class="service-subtitle">Доставка</h3>
@@ -175,7 +186,7 @@
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
         <a href="https://yandex.ru/maps/-/CBR2VBqH1D">
-          <img src="img/maps.jpg" alt="Карта проезда до офиса" width="300" height="158">
+          <img src="img/map.jpg" alt="Карта проезда до офиса" width="300" height="158">
         </a>
         <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
@@ -212,7 +223,7 @@
           Все права защищены
         </p>
         <div class="footer-social">
-          <h2 class="visual-hidden">Социальные сети</h2>
+          <h2 class="visually-hidden">Социальные сети</h2>
           <ul>
             <li><a href="#">ВКонтакте</a></li>
             <li><a href="#">Фейсбук</a></li>
@@ -229,5 +240,24 @@
         </p>
       </div>
     </footer>
+    <section class="modal-write-us">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="visually-hidden">Ваши контактные данные</h2>
+        <label for="name">Ваше имя:</label>
+        <input type="text" name="name" id="name" value="" placeholder="Имя Фамилия">
+        <label for="email">Ваш email:</label>
+        <input type="email" name="email" id="email" value="" placeholder="email@example.com">
+        <label for="letter">Текст письма:</label>
+        <textarea name="letter" id="letter" placeholder="В свободной форме"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
+    <section class="modal-map">
+      <h2 class="visually-hidden">Наш адрес на карте</h2>
+      <img src="img/map-fullscreen.jpg" width="940" height="446"
+           alt="Карта офиса по адресу:Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
