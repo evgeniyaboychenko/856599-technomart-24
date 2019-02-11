@@ -6,17 +6,45 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: #000000;
-
-  background-color: #ffffff;
 }
 
 a {
   text-decoration: none;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.main-header-top .container
+{
+  display:flex;
+  justify-content: space-between;
+
+}
+.main-header {
+  margin-bottom: 59px;
+  width: 100%;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+  /*/////временный цвет*/
+  background-color: yellow;
+  /*background-color: #f3f7f8;*/
+  /*background-image: url("../img/background.jpg");*/
+  background-repeat:repeat;
+}
 /*------------------------------*/
 .main-header-top {
+width: 100%;
+margin-bottom: 46px;
+
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -27,7 +55,7 @@ a {
 /*------------------строка поиска*/
 .main-header-top .search
 {
-  color: #ffffff;;
+  color: #ffffff;
   background-color: #293449;
   border:none;
 }
@@ -38,13 +66,16 @@ a {
 .search:active {
   color: #000000;
   background-color:#ffffff;
-
 }
 
 /*---------------------*/
 
 .earmarked-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+
 }
 
 .earmarked-list a {
@@ -81,13 +112,17 @@ a {
 }
 
 .main-header-bottom {
-  font-size: 14px;
-  line-height: 24px;
-  color: #32425c;
+  margin-bottom: 44px;
 
-  background-color: #f3f7f8;
-  background-image: url("../img/background.jpg");
-  /*background-position: top center;*/
+  /*width: 100%;*/
+
+
+  /*font-size: 14px;*/
+  /*line-height: 24px;*/
+  /*color: #32425c;*/
+
+  /*background-color: #f3f7f8;*/
+  /*background-image: url("../img/background.jpg");*/
   /*background-repeat:repeat;*/
 }
 
@@ -113,11 +148,13 @@ a {
 }
 
 .user-link {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .user-link a {
-
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -135,6 +172,11 @@ a {
 }
 
 .main-navigation {
+
+  margin-bottom: 60px;
+
+
+
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -144,6 +186,9 @@ a {
 }
 
 .site-navigation {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -167,7 +212,21 @@ a {
 }
 
 .offer-list {
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+
   list-style: none;
+}
+.offer-list li {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .offer-list li:nth-child(1) {
@@ -180,14 +239,19 @@ a {
 
 .offer-list li:nth-child(3) {
   background-color: #dc91d8;
+  margin-right: 0;
 }
 
 .offer-list li:nth-child(4) {
   background-color: #8ed78f;
+  margin-left: 640px;
+  margin-right: 0;
 }
 
 .offer-list li:nth-child(5) {
   background-color: #ffc047;
+  margin-left: 640px;
+  margin-right: 0;
 }
 
 .offer-list a {
@@ -222,6 +286,17 @@ a {
   color: #ffffff;
   background-color: #ee3643;
 }
+
+
+
+/*--------------slider--------------------*/
+.slider {
+  width:620px;
+  margin:0;
+  margin-bottom: 53px;
+  background-color: #685c53;
+}
+
 .caption p {
   font-size: 36px;
   line-height: 36px;
@@ -229,12 +304,6 @@ a {
   color: #ffffff;
   text-transform: uppercase;
 }
-
-/*--------------slider--------------------*/
-.slider {
-  background-color: #685c53;
-}
-
 .caption span {
   font-size: 18px;
   line-height: 24px;
@@ -266,19 +335,31 @@ a {
 .popular-header {
   background-color: #f9f5f0;
 }
+/*--------------популярные продукты-----------------------------*/
 
+.popular-header {
+  margin-bottom: 20px;
+}
 .popular-header h2 {
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
   text-transform: uppercase;
 }
-
-/*--------------популярные продукты-----------------------------*/
+.popular-products {
+  margin-bottom: 20px;
+}
 .popular-products-list {
+  margin:0;
+  padding:0;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+
 }
 .popular-products-item  {
+  width: 220px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -344,42 +425,75 @@ a {
 }
 */
 /*------------брэнды--------*/
+.brands {
+  margin-bottom: 85px;
+}
 .brands-list {
+  margin: 0;
+  padding: 0;
+
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  /*align-content: space-between;*/
+
   list-style: none;
 }
 
-.brands-list a {
+.brands-list  li {
+  width: 218px;
+  margin-bottom: 20px;
+  margin-right: 20px;
   border: 1px solid #eaeaea;
 }
+.brands-list  li:nth-child(4n) {
 
-.brands-list a:hover,
-.brands-list a:focus {
+
+  margin-right: 0;
+
+}
+
+
+.brands-list li:hover,
+.brands-list li:focus {
   border: none;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
-.brands-list a:active {
+.brands-list li:active {
   border: none;
   box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
 }
 
 /*--------можно ли так делать? или ссылкам нужно задать класс*/
-.brands-list a:active img {
+.brands-list li:active img {
   opacity: 0.3;
 }
 
 /*----------------сервисы----------------*/
+.services-wrapper {
+  width: 100%;
+  margin-bottom: 80px;
+  /*/////временный цвет*/
+  background-color: green;
+  /*background-color: #f3f7f8;*/
+  /*background-image: url("../img/background-service.jpg");*/
+  /*background-position: 0 0;*/
+  /*background-repeat: repeat;*/
+}
+.services-wrapper .container{
+  padding-top: 68px;
+  padding-bottom: 99px;
+}
 .services {
+  width: 400px;
+  margin-bottom: 70px;
   color: #000000;
-
-  background-color: #f3f7f8;
-  background-image: url("../img/background-service.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
-
 }
 
 .services h2 {
+  margin-top: 0;
+
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -390,8 +504,16 @@ a {
   font-size: 13px;
   line-height: 24px;
 }
+.services-column {
+  display: flex;
+
+}
 
 .service-button-list {
+  margin:0;
+  padding: 0;
+  margin-right: 80px;
+  width: 240px;
   list-style: none;
 }
 
@@ -417,8 +539,12 @@ a {
   color: #32425c;
   background-color: #ffffff;
 }
-
+.services-delivery {
+  width: 380px;
+}
 .services-delivery h3 {
+  margin-top: 0;
+
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
@@ -427,6 +553,18 @@ a {
 
 
 /*----------------компания-----*/
+.columns-company {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 85px;
+
+}
+.about-company {
+  width: 540px;
+}
+.main-contacts {
+  width: 300px;
+}
 
 .columns-company h2 {
   font-size: 30px;
@@ -784,20 +922,38 @@ a {
 }
 
 /*--------footer-----------*/
+.footer-top-wrapper {
+   width: 100%;
+   background-color: #32425c;
+ }
+.footer-bottom-wrapper {
+  width: 100%;
+  background-color: #293449;
+}
 .footer-top {
+
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-  background-color: #32425c;
+  /*background-color: #32425c;*/
 }
+.footer-top-line {
+  display:flex;
+  justify-content: space-between;
 
+}
 .footer-navigation,
 .footer-navigation-offer {
+  margin: 0;
+  padding: 0;
+
+
   list-style: none;
 }
 
 .footer-navigation a {
+
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -806,6 +962,8 @@ a {
 }
 
 .footer-contacts {
+  width:330px;
+  margin-right: 85px;
   font-style: normal;
 }
 
@@ -831,14 +989,19 @@ a {
 }
 
 .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
-  background-color: #293449;
+  /*background-color: #293449;*/
 }
 
 .footer-social ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
