@@ -50,8 +50,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
-  /*/////временный цвет*/
-  /*background-color: yellow;*/
+
   background-color: #f3f7f8;
   background-image: url("../img/background.jpg");
   background-position: 0 0;
@@ -65,11 +64,9 @@ input[type="radio"].visually-hidden {
   align-items: center;
 }
 
-/*------------------------------*/
 .main-header-top {
-  /*position: relative;*/
-  width: 100%;
   margin-bottom: 46px;
+  width: 100%;
 
   font-size: 17px;
   line-height: 18px;
@@ -78,19 +75,29 @@ input[type="radio"].visually-hidden {
   background-color: #293449;
 }
 
-/*---------------logo*/
-
 .main-header-logo {
   position: absolute;
+
   top: 0;
   left: 10px;
+
   width: 220px;
   height: 47px;
+
   background-color: #ee3643;
-  background-image: url("../img/svg/technomart-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.main-header-logo img {
+  position: absolute;
+
+  top: 13px;
+  left: 50%;
+
+  width: 110px;
+  height: 18px;
+
+  transform: translateX(-50%);
 }
 
 .main-header-logo:hover,
@@ -102,53 +109,36 @@ input[type="radio"].visually-hidden {
   background-color: #ba2732;
 }
 
-/*.main-header .main-header-logo::after {*/
-/*position: absolute;*/
-/*content: "";*/
-/*top:50%;*/
-/*left:50%;*/
-/*margin-top: -9px;*/
-/*margin-left: -55px;*/
-/*width:  110px;*/
-/*height: 18px;*/
-
-/*background-image:url("../img/svg/technomart-logo.svg");*/
-/*background-repeat: no-repeat;*/
-/*background-position: center center;*/
-/*}*/
-
-/*------------------строка поиска*/
 .main-header-top form {
   position: relative;
   margin-left: 220px;
-
 }
 
 .search {
-
-  width: 270px;
   padding: 12px 0;
   padding-left: 50px;
+
+  width: 270px;
 
   font-size: 17px;
   line-height: 18px;
 
-  opacity: 0;
   border: none;
+
+  opacity: 0;
 }
 
-/*----------Можно ли так задать цвет placeholder*/
 .search::placeholder {
   color: #000000;
 }
 
 .main-header-top label {
   position: absolute;
+
   padding-left: 48px;
 
   top: 12px;
   left: 0;
-
 }
 
 .main-header-top label::before {
@@ -160,6 +150,7 @@ input[type="radio"].visually-hidden {
 
   width: 17px;
   height: 17px;
+
   background-image: url("../img/svg/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -167,25 +158,21 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-/*------можно ли так наведение на форму, подсветить ярлык?*/
 .main-header-top form:hover label::before {
-
   opacity: 1;
 }
 
-/*+++++++++++++++++++++++++++++++++++*/
 .search:focus + label::before,
 .search:active + label::before {
-
   width: 17px;
   height: 17px;
+
   background-image: url("../img/svg/icon-search-red.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
   opacity: 1;
 }
-
-/*++++++++++++++++++++++++++++++++++++*/
 
 .main-header-top form:hover {
   background-color: #212a3a;
@@ -193,32 +180,26 @@ input[type="radio"].visually-hidden {
 
 .search:focus,
 .search:active {
-  opacity: 1;
   background-color: #ffffff;
+  opacity: 1;
 }
 
-/*----------правильно ли селекторы расписаны?*/
 .search:focus + label > span,
 .search:active + label > span {
-
   opacity: 0;
 }
 
-/*---------------------*/
-
 .earmarked-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 300px;
-  justify-content: space-between;
-
   margin: 0;
   padding: 0;
 
+  width: 300px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   list-style: none;
-
-  /*margin-left: 220px;*/
-
 }
 
 .earmarked-list a {
@@ -226,7 +207,6 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   width: 150px;
   padding: 12px 4px;
-  /*///Зачем нужно вертикальное выравниевание, если есть паддинги?так в лекции*/
   vertical-align: middle;
 
   color: #ffffff;
@@ -238,9 +218,9 @@ input[type="radio"].visually-hidden {
 }
 
 .earmarked-list .bookmarks::before {
+  position: absolute;
   content: "";
 
-  position: absolute;
   top: 12px;
   left: 17px;
 
@@ -260,9 +240,9 @@ input[type="radio"].visually-hidden {
 }
 
 .cart::before {
+  position: absolute;
   content: "";
 
-  position: absolute;
   top: 12px;
   left: 18px;
 
@@ -303,11 +283,11 @@ input[type="radio"].visually-hidden {
   display: block;
   box-sizing: border-box;
   width: 150px;
-  text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 5px;
   padding-right: 5px;
+  text-align: center;
 
   color: #ffffff;
   background-color: #63a63e;
@@ -323,67 +303,64 @@ input[type="radio"].visually-hidden {
   background-color: #518534;
 }
 
-/*///////////////////seredina*/
 .main-header-bottom {
   display: flex;
-  /*justify-content: space-between;*/
   align-items: flex-start;
+
   margin-bottom: 40px;
 
 }
 
 .main-header-bottom h1,
 .main-header-bottom .title {
-  box-sizing: border-box;
-
-  min-width: 209px;
   margin: 0;
-  margin-right: 58px;
   padding: 0;
+  margin-right: 58px;
   padding-top: 3px;
-  /*padding-left: 53px;*/
   margin-left: 53px;
+
+  box-sizing: border-box;
+  min-width: 209px;
+
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
+
   color: #ee3643;
 }
 
 .header-contacts {
-  /*margin: 0;*/
-  /*margin-right: 68px;*/
   width: 270px;
 }
 
 .header-contacts a {
   display: block;
   margin-bottom: 1px;
-  padding: 10px 0;
+  padding: 10px 5px;
   padding-left: 71px;
 
   font-style: normal;
   font-size: 21px;
   line-height: 21px;
-  /*letter-spacing: 0.42px;*/
+
   color: #ee3643;
-  border: 3px solid #ffffff;
 
   background-image: url("../img/svg/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 12px center;
+
+  border: 3px solid #ffffff;
 }
 
 .header-contacts p {
+  margin: 0;
   text-align: center;
   font-style: normal;
-  margin: 0;
 }
 
-/*--------------------------------*/
 .user-block-none {
   margin-left: auto;
-
 }
 
 .user-link {
@@ -398,7 +375,7 @@ input[type="radio"].visually-hidden {
 .user-link a {
   display: block;
 
-  padding: 12px 0;
+  padding: 12px 5px;
 
   font-size: 21px;
   line-height: 21px;
@@ -409,8 +386,10 @@ input[type="radio"].visually-hidden {
 
 .user-link .login-link {
   position: relative;
+
   box-sizing: border-box;
   width: 121px;
+
   padding-left: 47px;
   margin-right: 10px;
 }
@@ -428,14 +407,17 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/svg/icon-login.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
   filter: saturate(0%);
   opacity: 0.3;
 
 }
 
 .user-link .registration-link {
-  text-align: center;
+  box-sizing: border-box;
   width: 150px;
+
+  text-align: center;
 }
 
 .user-link a:hover,
@@ -449,35 +431,27 @@ input[type="radio"].visually-hidden {
 
 .user-link .login-link:hover::before,
 .user-link .login-link:focus::before {
-
   filter: saturate(100%);
   opacity: 1;
 }
 
 .user-link .login-link:active::before {
-
   filter: saturate(0%);
   opacity: 0.3;
 }
 
-/*////---------------навигация*/
 .main-navigation {
-
-  /*margin-bottom: 60px;*/
-
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
 
   background-color: #32425c;
   box-shadow: inset 0 -5px 0 0 #293449;
-
 }
 
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-evenly;*/
 
   margin: 0;
   padding: 0;
@@ -507,9 +481,9 @@ input[type="radio"].visually-hidden {
   padding-right: 32px;
 }
 
-
 .site-navigation li:nth-child(7) a {
   flex-grow: 1;
+  max-width: 147px;
   padding-left: 32px;
   padding-right: 52px;
 }
@@ -524,7 +498,6 @@ input[type="radio"].visually-hidden {
   background-color: #1d2739;
 }
 
-/*----------предложения-------------*/
 .offer {
   position: relative;
   color: #ffffff;
@@ -532,14 +505,12 @@ input[type="radio"].visually-hidden {
 }
 
 .offer-list {
-  /*position: relative;*/
   margin: 0;
   padding: 0;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
 
   list-style: none;
 }
@@ -547,6 +518,7 @@ input[type="radio"].visually-hidden {
 .offer-list li {
   position: relative;
   width: 300px;
+
   margin-bottom: 20px;
   margin-right: 20px;
 }
@@ -600,13 +572,14 @@ input[type="radio"].visually-hidden {
 }
 
 .offer-list a {
-
   display: block;
-  margin: 0;
 
+  margin: 0;
   margin-left: 23px;
   margin-bottom: 22px;
-  padding: 10px 0;
+  padding: 10px 5px;
+
+  box-sizing: border-box;
   max-width: 138px;
 
   font-size: 14px;
@@ -635,6 +608,7 @@ input[type="radio"].visually-hidden {
   margin-top: 20px;
   margin-left: 23px;
   margin-bottom: 13px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -644,7 +618,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   content: "";
   z-index: 10;
-  top:-1px;
+  top: -1px;
   right: -1px;
 
   width: 60px;
@@ -657,18 +631,21 @@ input[type="radio"].visually-hidden {
 
 .offer-list .new-label::before {
   top: 0;
-  right: 0;'
+  right: 0;
 }
 
-/*--------------slider--------------------*/
+/*--------------слайдер------------------*/
+
 .slider {
-  position: absolute;
   display: none;
+  position: absolute;
+  margin: 0;
 
   bottom: 0;
   left: 0;
+
   width: 620px;
-  margin: 0;
+
   background-color: #685c53;
 }
 
@@ -678,15 +655,16 @@ input[type="radio"].visually-hidden {
 
 .slider img {
   display: block;
+
   width: 620px;
   height: 266px;
 }
 
 .caption {
   position: absolute;
+
   top: 23px;
   left: 25px;
-
 }
 
 .caption p {
@@ -696,8 +674,9 @@ input[type="radio"].visually-hidden {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
-  color: #ffffff;
   text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 .caption span {
@@ -721,6 +700,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/svg/icon-left.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
   cursor: pointer;
 }
 
@@ -743,13 +723,6 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-/*.switch-list {*/
-/*padding: 0;*/
-/*margin: 0;*/
-/*list-style: none;*/
-/*display: inline-block;*/
-/*}*/
-
 .slider-button-first {
   position: absolute;
   content: "";
@@ -764,6 +737,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   border-radius: 50% 50%;
   background-color: #ffffff;
+
   cursor: pointer;
 }
 
@@ -781,6 +755,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   border-radius: 50% 50%;
   background-color: #ffffff;
+
   cursor: pointer;
 }
 
@@ -794,26 +769,26 @@ input[type="radio"].visually-hidden {
   width: 6px;
   height: 6px;
 
-  border: none;
-  border-radius: 50% 50%;
   background-color: #ee3643;
 
+  border: none;
+  border-radius: 50% 50%;
 }
 
 .slider-button {
   position: absolute;
-  box-sizing: border-box;
-  width: 195px;
-  text-align: center;
+  left: 0;
   top: 350px;
   margin-left: 25px;
-  /*margin-bottom: 20px;*/
-  left: 0;
+
+  box-sizing: border-box;
+  width: 195px;
+
+  text-align: center;
 }
 
 .button {
   padding: 10px 5px;
-  /*padding: 10px 20px;*/
 
   font-size: 14px;
   line-height: 18px;
@@ -825,7 +800,6 @@ input[type="radio"].visually-hidden {
 
   background-color: #ee3643;
   border-radius: 2px 2px;
-  /*border: none;*/
 }
 
 .button:hover,
@@ -854,8 +828,6 @@ input[type="radio"].visually-hidden {
   background-color: #f9f5f0;
 }
 
-/*--------------популярные продукты-----------------------------*/
-
 .popular-header {
   display: flex;
   justify-content: space-between;
@@ -864,34 +836,19 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-header h2 {
-  /*margin: 0;*/
   max-width: 600px;
 
   margin-left: 28px;
-
   padding: 30px 0;
-
-  /*font-size: 30px;*/
-  /*line-height: 30px;*/
-  /*font-weight: 400;*/
-
-  /*color: #32425c;*/
-  /*text-transform: uppercase;*/
 }
 
 .popular-header a {
   box-sizing: border-box;
   width: 253px;
-  align-items: center;
+  text-align: center;
   margin-right: 24px;
-  /*padding: 10px 69px;*/
 }
 
-.popular-products {
-  /*margin-bottom: 20px;*/
-}
-
-/*----------------список перфораторов-----------------*/
 .products-list {
   display: flex;
   flex-wrap: wrap;
@@ -899,7 +856,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   list-style: none;
-
 }
 
 .catalog-perforator .products-list {
@@ -910,24 +866,25 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: flex;
   flex-direction: column;
-  /*justify-content: space-between;*/
+
   box-sizing: border-box;
   width: 220px;
-
-  padding-bottom: 68px;
-
-  min-height:318px;
+  min-height: 318px;
   margin-bottom: 20px;
   margin-right: 20px;
+  padding-bottom: 68px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+  text-transform: uppercase;
 
   color: #000000;
-  text-transform: uppercase;
-  border: 1px solid #eaeaea;
+
   background-color: #ffffff;
+
+  border: 1px solid #eaeaea;
 }
 
 .popular-products .products-item:nth-child(4n) {
@@ -961,7 +918,6 @@ input[type="radio"].visually-hidden {
   text-align: center;
 
   color: #999999;
-  /*margin-bottom: 68px;*/
 }
 
 .products-item p {
@@ -978,12 +934,11 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-/*--------------------strelka*/
 .arrow {
-  /*position: relative;*/
   position: absolute;
   left: 0;
   bottom: 0;
+
   width: 121px;
   height: 37px;
 
@@ -993,16 +948,15 @@ input[type="radio"].visually-hidden {
   margin-bottom: 21px;
   border-top-left-radius: 2px 2px;
   border-bottom-left-radius: 2px 2px;
-
 }
 
 .arrow p {
-
   margin: 0;
   padding: 10px 0;
   padding-left: 27px;
   padding-right: 13px;
   text-align: center;
+
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
@@ -1013,18 +967,19 @@ input[type="radio"].visually-hidden {
 
 .arrow::after {
   position: absolute;
-
   content: "";
-  width: 26px;
-  height: 26px;
-  background-color: #ee3643;
+
   transform: rotate(45deg);
   top: 50%;
   margin-top: -13px;
   right: -13px;
+
+  width: 26px;
+  height: 26px;
+
+  background-color: #ee3643;
 }
 
-/*------------брэнды--------*/
 .brands {
   margin-bottom: 65px;
 }
@@ -1040,11 +995,14 @@ input[type="radio"].visually-hidden {
 }
 
 .brands-list li {
-box-sizing: border-box;
-  width: 220px;
-  height: 145px;
   margin-bottom: 20px;
   margin-right: 20px;
+
+  box-sizing: border-box;
+
+  width: 220px;
+  height: 145px;
+
   border: 1px solid #eaeaea;
 }
 
@@ -1054,22 +1012,17 @@ box-sizing: border-box;
 
   width: 100%;
   height: 100%;
-
 }
 
-/*------------------для центрировани------------*/
 .brands-list img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 .brands-list li:nth-child(4n) {
-
   margin-right: 0;
-
 }
 
 .brands-list li:hover,
@@ -1083,17 +1036,14 @@ box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
 }
 
-/*--------можно ли так делать? или ссылкам нужно задать класс*/
 .brands-list li:active img {
   opacity: 0.3;
 }
 
-/*----------------сервисы----------------*/
 .services-wrapper {
   width: 100%;
   margin-bottom: 80px;
-  /*/////временный цвет*/
-  /*background-color: green;*/
+
   background-color: #f3f7f8;
   background-image: url("../img/background-service.jpg");
   background-position: 0 0;
@@ -1114,15 +1064,12 @@ box-sizing: border-box;
 .services .services-subtitle {
   margin-bottom: 25px;
   color: #000000;
-  /*font-size: 30px;*/
-  /*line-height: 30px;*/
-  /*font-weight: 400;*/
-  /*text-transform: uppercase;*/
 }
 
 .services p {
   margin: 0;
   padding: 0;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1130,11 +1077,11 @@ box-sizing: border-box;
 
 .services-column {
   display: flex;
-
 }
 
 .service-button-list {
   position: relative;
+
   margin: 0;
   padding: 0;
   margin-right: 80px;
@@ -1151,101 +1098,108 @@ box-sizing: border-box;
 
   width: 10px;
   height: 268px;
+
   background-image: url("../img/shadow-button.png");
 }
 
 .service-button-item button {
+  padding: 0;
+  padding-left: 22px;
+  padding-right: 10px;
+  margin-top: 1px;
+
   box-sizing: border-box;
   width: 240px;
   height: 61px;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 30px;
-  color: #ffffff;
-  padding: 0;
   text-align: left;
-  /*vertical-align: middle;*/
-  padding-left: 22px;
-  padding-right: 5px;
 
-  margin-top: 1px;
-  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
+  color: #ffffff;
   background-color: #32425c;
 
-  border: none;
+  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
 
+  border: none;
 }
 
-.service-button-item button:hover {
+.service-button-item button:hover,
+.service-button-item button:focus {
   color: #ffffff;
   background-color: #293449;
 }
 
-/*/////////разобраться///////////////*/
 .service-button-list .service-button-item .button-active,
 .service-button-item button:active {
   color: #32425c;
-  box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
+
   background-color: #ffffff;
+
+  box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
 }
 
 .service-delivery {
   position: relative;
   width: 275px;
-
 }
 
 .service-warranty {
+  display: none;
   position: relative;
   width: 379px;
-
 }
 
 .service-credit {
+  display: none;
   position: relative;
   width: 279px;
-
 }
 
 .service-credit:after {
   position: absolute;
   content: "";
+  z-index: 1;
 
   top: 0;
   left: 165px;
 
   width: 465px;
   height: 285px;
+
   background-image: url("../img/credit.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .service-delivery:after {
-
   position: absolute;
   content: "";
+  z-index: 1;
 
   top: 25px;
   left: 151px;
 
   width: 468px;
   height: 261px;
+
   background-image: url("../img/delivery.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .service-warranty:after {
-
   position: absolute;
   content: "";
+  z-index: 1;
 
   top: 2px;
   left: 240px;
 
   width: 389px;
   height: 283px;
+
   background-image: url("../img/warranty.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1253,37 +1207,45 @@ box-sizing: border-box;
 
 .service h3 {
   margin: 0;
-
   margin-bottom: 24px;
+
   font-size: 36px;
   line-height: 36px;
-  text-transform: uppercase;
   font-weight: 400;
+  text-transform: uppercase;
+
   color: #32425c;
 }
 
 .service p {
   margin: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.service-credit p {
   margin-bottom: 27px;
 }
 
 .service-credit a {
+  position: relative;
+  z-index: 4;
+
   display: block;
+
   box-sizing: border-box;
   width: 195px;
-  align-items: center;
+
+  text-align: center;
 }
 
-/*----------------компания-----*/
 .columns-company {
   display: flex;
   justify-content: space-between;
   margin-bottom: 86px;
-
 }
 
 .about-company {
-
   width: 520px;
 }
 
@@ -1292,20 +1254,15 @@ box-sizing: border-box;
 }
 
 .columns-company .about-company-subtitle {
-
   color: #000000;
   margin-bottom: 25px;
-  /*font-size: 30px;*/
-  /*line-height: 30px;*/
-  /*font-weight: 400;*/
-  /*text-transform: uppercase;*/
 }
 
 .columns-company p {
   margin: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
   margin-bottom: 20px;
 
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
@@ -1320,9 +1277,8 @@ box-sizing: border-box;
 
 .columns-company .transport-companies {
   padding: 0;
-
-  list-style: none;
   margin-bottom: 34px;
+  list-style: none;
 }
 
 .transport-companies li {
@@ -1347,14 +1303,15 @@ box-sizing: border-box;
 
   width: 25px;
   height: 2px;
-  background-color: #ee3643;
 
+  background-color: #ee3643;
 }
 
 .about-company .about-company-button {
   display: block;
   box-sizing: border-box;
   width: 220px;
+
   text-align: center;
 }
 
@@ -1362,14 +1319,16 @@ box-sizing: border-box;
   display: block;
   box-sizing: border-box;
   width: 100%;
+
   text-align: center;
 }
 
 .main-contacts .main-contacts-map {
+  margin-bottom: 40px;
+
   display: block;
   width: 300px;
   height: 158px;
-  margin-bottom: 40px;
 }
 
 /*------------------catalog--------------------------------*/
@@ -1378,40 +1337,39 @@ box-sizing: border-box;
 }
 
 .user-block {
-
   width: 299px;
   margin-left: auto;
 }
 
 .username {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 0;
   margin: 0;
+  margin-bottom: 7px;
+
   list-style: none;
 
   background-color: #ffffff;
-  margin-bottom: 7px;
 }
 
 .username a {
   display: block;
 
   padding: 12px 0;
+
   font-size: 21px;
   line-height: 21px;
   color: #000000;
-
 }
 
 .username .authorized {
   position: relative;
+
   padding-left: 46px;
   padding-right: 10px;
-
 }
 
 .username .authorized::before {
@@ -1428,6 +1386,7 @@ box-sizing: border-box;
   background-image: url("../img/svg/icon-user.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
   filter: saturate(0%);
   opacity: 0.3;
 }
@@ -1444,10 +1403,8 @@ box-sizing: border-box;
 }
 
 .username .exit {
-
   box-sizing: border-box;
   width: 40px;
-  /*height: 17px;*/
 
   padding: 22px 1px;
   text-align: center;
@@ -1455,19 +1412,18 @@ box-sizing: border-box;
   background-image: url("../img/svg/icon-logout.svg");
   background-repeat: no-repeat;
   background-position: center center;
+
   filter: saturate(0%);
   opacity: 0.3;
 }
 
 .username .exit:hover,
 .username .exit:focus {
-
   filter: saturate(100%);
   opacity: 1;
 }
 
 .username .exit:active {
-
   filter: saturate(0%);
   opacity: 0.3;
 }
@@ -1488,20 +1444,19 @@ box-sizing: border-box;
   margin: 0;
   margin-left: 17px;
   padding: 0;
+
   list-style: none;
   font-size: 16px;
   line-height: 18px;
 }
 
 .user-list a {
-
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
   text-decoration: underline;
 }
 
-/*----у li или а делать точечку-разделитель???*/
 .user-list li:not(:last-child) {
   position: relative;
   margin-right: 32px;
@@ -1530,15 +1485,14 @@ box-sizing: border-box;
   color: rgba(0, 0, 0, 0.3);
 }
 
-/*------------breadcrumbs---------------------*/
-
 .container-inner {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-  color: #000000;
   text-transform: uppercase;
+
+  color: #000000;
 
   background-color: #ffffff;
 }
@@ -1561,22 +1515,22 @@ box-sizing: border-box;
 }
 
 .breadcrumbs li:first-child {
-  /*position: relative;*/
   padding-left: 14px;
-
 }
 
 .breadcrumbs li:first-child a::before {
   position: absolute;
   content: "";
+
   top: 3px;
   left: 0;
+
   width: 15px;
   height: 12px;
+
   background-image: url("../img/svg/icon-home.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
 }
 
 .breadcrumbs li:not(:last-child)::after {
@@ -1601,31 +1555,17 @@ box-sizing: border-box;
 }
 
 .container-inner .catalog-subtitle {
-  /*margin: 0;*/
-  /*font-family: 'Cuprum', Arial, sans-serif;*/
-  /*font-size: 30px;*/
-  /*font-weight: 400;*/
-  /*line-height: 30px;*/
-  /*color: #32425c;*/
-  /*text-transform: uppercase;*/
-
-  /*-------временный цвет*/
-  /*background-color: greenyellow;*/
-
   background-color: #f2f6f8;
   padding: 30px 0;
   padding-left: 29px;
   margin-bottom: 19px;
 }
 
-/*-------------------------------------*/
-
 .columns-page {
   display: flex;
   justify-content: space-between;
 }
 
-/*---------------------фильтры----------------------*/
 .filters {
   width: 220px;
 }
@@ -1708,12 +1648,14 @@ box-sizing: border-box;
   border-radius: 2px 2px;
 }
 
-/*--------------бегунок--------------------*/
 .range-double {
   position: relative;
+
   width: 100%;
   height: 80px;
+
   margin-bottom: 9px;
+
   background-color: #f7f3ec;
 }
 
@@ -1722,10 +1664,13 @@ box-sizing: border-box;
 
   top: 50%;
   left: 50%;
+
   margin-top: -1px;
   margin-left: -90px;
+
   width: 180px;
   height: 2px;
+
   background-color: #d7dcde;
 }
 
@@ -1735,15 +1680,20 @@ box-sizing: border-box;
   background-color: #00ca74;
 }
 
-/*/////////бегунки*/
 .roller {
   position: relative;
+
   width: 20px;
   height: 20px;
+
   border-radius: 50%;
   background-color: #ffffff;
   box-shadow: 0 2px 0 0 #e0ddd8;
 
+}
+
+.roller:hover {
+  cursor: pointer;
 }
 
 .roller::before {
@@ -1752,8 +1702,10 @@ box-sizing: border-box;
 
   top: 8px;
   left: 8px;
+
   width: 4px;
   height: 4px;
+
   border-radius: 50%;
   background-color: #ababab;
 }
@@ -1763,8 +1715,9 @@ box-sizing: border-box;
 
   top: 50%;
   left: 50%;
+
   margin-top: -10px;
-  margin-left: -100px;
+  margin-left: -90px;
 }
 
 .roller-max {
@@ -1772,11 +1725,11 @@ box-sizing: border-box;
 
   top: 50%;
   left: 50%;
+
   margin-top: -10px;
-  margin-left: 42px;
+  margin-left: 50px;
 }
 
-/*-------*/
 .range-value-container {
   display: flex;
   justify-content: space-between;
@@ -1784,12 +1737,13 @@ box-sizing: border-box;
 }
 
 .price-list output {
-
   width: 95px;
   padding: 10px 0;
+
   font-size: 17px;
   line-height: 18px;
   text-align: center;
+
   background-color: #f7f3ec;
 }
 
@@ -1805,67 +1759,75 @@ box-sizing: border-box;
 
 .filter-option label {
   position: relative;
-
   cursor: pointer;
-
 }
 
 .filter-option label::before {
+  display: block;
   position: absolute;
   content: "";
-  display: block;
+}
 
+.filter-option :hover {
+  opacity: 1;
 }
 
 .filter-option .filter-input:hover + label::before,
 .filter-option .filter-input:focus + label::before {
-
-  /*filter: brightness(0.9);*/
-  background-color: yellow;
+  opacity: 1;
 }
 
-
 .filter-input-checkbox + label::before {
-
   width: 23px;
   height: 23px;
+
   top: 0;
   left: -35px;
 
   background-image: url("../img/svg/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  opacity: 0.79;
 }
 
 .filter-input-checkbox:checked + label::before {
   width: 27px;
   height: 23px;
+
   background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.79;
 }
 
 .filter-input-radio + label::before {
-
   width: 25px;
   height: 25px;
+
   top: 0;
   left: -35px;
 
   background-image: url("../img/svg/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  opacity: 0.79;
 }
 
 .filter-input-radio:checked + label::before {
   width: 25px;
   height: 25px;
+
   background-image: url("../img/svg/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.79;
 }
 
-
-/*-сделать фон для заблокированных*/
 .filter-option .filter-input:disabled + label {
-
-  filter: brightness(0.9);
   opacity: 0.3;
 }
 
@@ -1882,40 +1844,34 @@ box-sizing: border-box;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-
+  text-transform: uppercase;
   color: #000000;
 
-  border: 1px solid #e5e5e5;
   background-color: #ffffff;
 
+  border: 1px solid #e5e5e5;
   border-radius: 2px 2px;
-  text-transform: uppercase;
-
 }
 
 .show-sorting:hover,
 .show-sorting:focus {
-  border: 1px solid #bdc6ca;
   background-color: #ffffff;
+  border: 1px solid #bdc6ca;
   outline: none;
 }
 
 .show-sorting:active {
-  outline: none;
-  border: 1px solid #ee3643;
   background-color: #ffffff;
+  border: 1px solid #ee3643;
+  outline: none;
 }
 
-/*--------------сортировка-----------------------*/
 .column-sorting {
   width: 700px;
-
 }
 
 .sorting {
-  /*width: 100%;*/
   display: flex;
-  /*justify-content: space-between;*/
   background-color: #f7f3ec;
   margin-bottom: 21px;
 }
@@ -1938,7 +1894,6 @@ box-sizing: border-box;
 }
 
 .sorting-list a {
-
   border-bottom: 1px dotted #ee3643;
   color: rgba(0, 0, 0, 0.3);
   outline: none;
@@ -1973,7 +1928,6 @@ box-sizing: border-box;
   padding: 0;
   margin: 0;
   display: flex;
-  /*justify-content: space-between;*/
   align-items: center;
   list-style: none;
 }
@@ -1986,7 +1940,6 @@ box-sizing: border-box;
   padding: 19px 0;
   width: 22px;
   outline: none;
-  /*color: rgba(0, 0, 0, 0.3);*/
 }
 
 .sorting-order-list .ascending {
@@ -2002,6 +1955,7 @@ box-sizing: border-box;
   background-image: url("../img/svg/icon-up-black.svg");
   background-repeat: no-repeat;
   background-position: center center;
+
   opacity: 0.3;
 }
 
@@ -2019,6 +1973,7 @@ box-sizing: border-box;
   transform: rotate(180deg);
   background-repeat: no-repeat;
   background-position: center center;
+
   opacity: 0.3;
 }
 
@@ -2046,38 +2001,41 @@ box-sizing: border-box;
 
 .product-button {
   display: none;
+
   position: absolute;
   z-index: 5;
+
   padding-top: 43px;
   top: 0;
   left: 0;
+
   text-align: center;
   width: 218px;
-  /*min-height: 164px;*/
 }
 
 .button-buy {
   position: relative;
+
   box-sizing: border-box;
   width: 135px;
+
   padding: 10px 5px;
   padding-left: 49px;
-  text-align: left;
-
-
   margin-bottom: 8px;
+
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+
   color: #ffffff;
   background-color: #63a63e;
 
   border: none;
   border-radius: 2px 2px;
   box-shadow: inset 0 -3px 0 #367315;
-  text-transform: uppercase;
-
 }
 
 .button-buy::before {
@@ -2106,7 +2064,6 @@ box-sizing: border-box;
 
 .button-buy:hover,
 .button-buy:focus {
-  /*border:none;*/
   background-color: #5fbb2d;
   box-shadow: inset 0 -3px 0 #367315;
 }
@@ -2126,19 +2083,17 @@ box-sizing: border-box;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  text-transform: uppercase;
   color: #32425c;
 
   background-color: #ffffff;
 
   border: 3px solid #63a63e;
   border-radius: 2px 2px;
-  text-transform: uppercase;
 }
 
 .button-marker:hover,
 .button-marker:focus {
-  /*border:none;*/
-  /*background-color: #ffffff;*/
   border: 3px solid #32425c;
 }
 
@@ -2148,7 +2103,6 @@ box-sizing: border-box;
   opacity: 0.3;
 }
 
-/*-------------paginator----------------*/
 .paginator-list {
   display: flex;
   margin: 0;
@@ -2159,22 +2113,23 @@ box-sizing: border-box;
 
 .paginator-item a {
   display: block;
+
   box-sizing: border-box;
   min-width: 38px;
   padding: 9px 5px;
   margin-right: 10px;
+
   text-align: center;
+
   color: #000000;
-  border: 1px solid #e5e5e5;
-  border-radius: 2px 2px;
   background-color: #ffffff;
 
+  border: 1px solid #e5e5e5;
+  border-radius: 2px 2px;
 }
 
 .paginator-item:last-child a {
-
- min-width: 140px;
-
+  min-width: 140px;
 }
 
 .paginator-item a:hover,
@@ -2204,7 +2159,6 @@ box-sizing: border-box;
 
 /*------------о префораторах------------------*/
 .about-perforator {
-
   padding-top: 38px;
   padding-bottom: 68px;
   background-color: #f2f6f8;
@@ -2213,7 +2167,6 @@ box-sizing: border-box;
 .about-perforator .about-perforator-subtitle {
 
   padding: 27px 0;
-  /*padding-top: ;*/
   margin-bottom: 0;
   color: #000000;
 }
@@ -2221,16 +2174,12 @@ box-sizing: border-box;
 .about-perforator dl {
 
   margin: 0;
-  /*margin-top: 30px;*/
-
   font-size: 13px;
   line-height: 24px;
   text-transform: none;
 }
 
-/*///////Можно ли использовать float*/
 .about-perforator dt {
-  /*float: left;*/
   display: inline;
 }
 
@@ -2240,27 +2189,22 @@ box-sizing: border-box;
   display: inline;
 }
 
-/*--------footer-----------*/
 .main-footer {
   background-color: #32425c;
   width: 100%;
-
 }
 
 .footer-bottom-wrapper {
-  /*width: 100%;*/
   background-color: #293449;
 }
 
 .footer-top {
-
   margin-bottom: 50px;
 
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-  /*background-color: #32425c;*/
 }
 
 .footer-top-line {
@@ -2268,23 +2212,26 @@ box-sizing: border-box;
   justify-content: space-between;
 
   margin-bottom: 27px;
-
 }
 
-/*.main-footer-logo img {*/
-/*display: block;*/
-/*}*/
-
 .main-footer-logo {
-  /*position: absolute;*/
-  /*top: 0;*/
+  position: relative;
+
   width: 220px;
   height: 68px;
+
   background-color: #ee3643;
-  background-image: url("../img/svg/technomart-logo-footer.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.main-footer-logo img {
+  width: 138px;
+  height: 23px;
+
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-footer-logo:hover,
@@ -2311,7 +2258,6 @@ box-sizing: border-box;
 }
 
 .navigation-offer {
-
   padding: 0;
   width: 525px;
 }
@@ -2334,20 +2280,14 @@ box-sizing: border-box;
 }
 
 .navigation-offer a {
-  /*font-family: 'Cuprum', Arial, sans-serif;*/
-  /*font-size: 18px;*/
-  /*line-height: 24px;*/
   color: #ffda96;
-  /*background-color: #32425c;*/
 }
 
 .footer-navigation a:hover {
-
   text-decoration: underline;
 }
 
 .footer-navigation a:focus {
-
   opacity: 0.5;
   text-decoration: none;
 }
@@ -2443,6 +2383,7 @@ box-sizing: border-box;
 
 .mailto a,
 .developers a {
+  display: block;
   color: #ffd180;
 }
 
@@ -2457,19 +2398,15 @@ box-sizing: border-box;
   color: #ee3643;
 }
 
-/*--------------------modal---------------------------*/
+/*-------------------------------------------------------*/
 .modal {
-
   /*position: fixed;*/
-
   color: #000000;
   background-color: #ffffff;
 
 }
 
 .modal-t {
-
-
   padding-left: 80px;
   padding-right: 80px;
   padding-top: 45px;
@@ -2486,9 +2423,6 @@ box-sizing: border-box;
 
 .modal-write-us {
   position: relative;
-  /*top: 120px;*/
-  /*left: 50%;*/
-  /*margin-left: -320px;*/
   margin: auto;
 
   width: 620px;
@@ -2501,6 +2435,7 @@ box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   margin: 0 auto;
   margin-bottom: 17px;
 }
@@ -2518,17 +2453,15 @@ box-sizing: border-box;
 }
 
 .modal-textarea-item {
-   width: 460px;
+  width: 460px;
 }
 
-/*//можно ли так указать размеры, а не через col row*/
 .modal-textarea-item textarea {
   width: 100%;
   height: 114px;
   box-sizing: border-box;
   padding: 8px 14px;
   resize: none;
-
 }
 
 .form-modal-write-us label {
@@ -2549,45 +2482,29 @@ box-sizing: border-box;
 
 .modal-write-us input:hover,
 .modal-write-us textarea:hover {
-
   border-color: #b5b5b5;
-
 }
 
 .modal-write-us input:focus,
 .modal-write-us textarea:focus {
-
   border-color: #ee3643;
-
 }
 
 .modal-write-us label {
-
   font-size: 18px;
   line-height: 18px;
-
-}
-
-.modal-bottom {
-  /*padding-top: 37px;*/
-  /*padding-bottom: 37px;*/
-  /*padding-left: 80px;*/
-  /*padding-right: 80px;*/
-
-  /*text-align: center;*/
-  /*background-color: #f4f4f4;*/
 }
 
 .modal-bottom button {
-box-sizing: border-box;
+  padding: 10px 5px;
+  box-sizing: border-box;
   width: 100%;
+
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
-  padding: 10px 5px;
 
   text-align: center;
-  /*vertical-align: middle;*/
   text-transform: uppercase;
 
   background-color: #ee3643;
@@ -2602,10 +2519,8 @@ box-sizing: border-box;
   border: none;
 
   background-color: transparent;
-
 }
 
-/*-------------------------------*/
 .modal-map {
 
   position: relative;
@@ -2617,7 +2532,6 @@ box-sizing: border-box;
   box-shadow: 0 0 15px 1px rgba(47, 42, 43, 0.5);
 }
 
-/*------------------------------------*/
 .modal-message {
   /*display: none;*/
   position: relative;
@@ -2629,14 +2543,6 @@ box-sizing: border-box;
   text-align: center;
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
   border-top: 7px solid #ff5357;
-
-  /*top: 50%;*/
-  /*left: 50%;*/
-
-  /*!*display: none;*!*/
-  /*margin-top: -310px;*/
-  /*margin-left: -310px;*/
-
 }
 
 .modal-message h2 {
@@ -2651,10 +2557,10 @@ box-sizing: border-box;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
+
   background-image: url("../img/svg/icon-mark.svg");
   background-repeat: no-repeat;
   background-position: 0 2px;
-
 }
 
 .modal-message-bottom {
