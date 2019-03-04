@@ -1,44 +1,45 @@
-(function() {
-  var popup=document.querySelector(".modal-write-us");
+(function () {
+  var popup = document.querySelector(".modal-write-us");
   if (!popup) {
     return;
   }
-  var button=document.querySelector(".main-contacts-button");
-  var close=popup.querySelector(".close");
+  var button = document.querySelector(".main-contacts-button");
+  var close = popup.querySelector(".close");
 
-  var firstName=popup.querySelector("#name");
-  var email=popup.querySelector("#email");
-  var letter=popup.querySelector("#letter");
-  var form=popup.querySelector(".form-modal-write-us");
+  var firstName = popup.querySelector("#name");
+  var email = popup.querySelector("#email");
+  var letter = popup.querySelector("#letter");
+  var form = popup.querySelector(".form-modal-write-us");
 
-  var storageName="";
-  var storageMail="";
-  var isStorageSupport=true;
+  var storageName = "";
+  var storageMail = "";
+  var isStorageSupport = true;
 
-try {
-  storageName = localStorage.getItem("name");
-  storageMail = localStorage.getItem("email");
-}
-   catch (err) {
-  isStorageSupport = false;
-   }
+  try {
+    storageName = localStorage.getItem("name");
+    storageMail = localStorage.getItem("email");
+  }
+  catch (err) {
+    isStorageSupport = false;
+  }
 
   button.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
-    if (storageName) {firstName.value = storageName;}
-    if (storageMail) {email.value = storageMail;}
-    if(!firstName.value) {
-        firstName.focus();
+    if (storageName) {
+      firstName.value = storageName;
+    }
+    if (storageMail) {
+      email.value = storageMail;
+    }
+    if (!firstName.value) {
+      firstName.focus();
     } else {
-      if(!email.value){
+      if (!email.value) {
         email.focus();
       } else letter.focus();
     }
-
-
   });
-
 
   close.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -47,9 +48,9 @@ try {
   });
 
   window.addEventListener("keydown", function (evt) {
-    if(evt.keyCode === 27){
+    if (evt.keyCode === 27) {
       evt.preventDefault();
-      if( popup.classList.contains("modal-show")){
+      if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-error")
         popup.classList.remove("modal-show");
       }
@@ -60,8 +61,7 @@ try {
     if (!firstName.value || !email.value || !letter.value) {
       evt.preventDefault();
       popup.classList.remove("modal-error");
-      setTimeout (function()
-      {
+      setTimeout(function () {
         popup.classList.add("modal-error");
       }, 1);
     } else {
@@ -73,58 +73,65 @@ try {
   });
 })();
 // ------------------------карта------------
-var popupMap = document.querySelector(".modal-map");
-var buttonMap=document.querySelector(".main-contacts-map");
-var closeMap=popupMap.querySelector(".close");
-
-buttonMap.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popupMap.classList.add("modal-show");
-
-});
-
-closeMap.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popupMap.classList.remove("modal-show");
-})
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popupMap.classList.contains("modal-show")) {
-      popupMap.classList.remove("modal-show");
-    }
-  }
-});
-
-// -----------------------переключение слайдов--------
-//
 (function () {
+  var popupMap = document.querySelector(".modal-map");
+  if (!popupMap) {
+    return;
+  }
 
-var slide=document.querySelectorAll(".slider");
-var buttonLeft=document.querySelector(".slider-button-left");
-var buttonRight=document.querySelector(".slider-button-right");
+  var buttonMap = document.querySelector(".main-contacts-map");
+  var closeMap = popupMap.querySelector(".close");
 
-var buttonLabel=document.querySelectorAll(".button-label");
-var buttonFirst=document.querySelector(".slider-button-first");
-var buttonSecond=document.querySelector(".slider-button-second");
-
-for (var j=0; j < slide.length; j++) {
-  subscribe(j);
-}
-
-function subscribe(j) {
-  var button = buttonLabel[j];
-  button.addEventListener("click", function (evt) {
+  buttonMap.addEventListener("click", function (evt) {
     evt.preventDefault();
-    if (!button.classList.contains("button-checked")) {
-      for (var i = 0; i < slide.length; i++) {
-        slide[i].classList.toggle("slider-checked");
-        buttonLabel[i].classList.toggle("button-checked");
+    popupMap.classList.add("modal-show");
+
+  });
+
+  closeMap.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupMap.classList.remove("modal-show");
+  })
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popupMap.classList.contains("modal-show")) {
+        popupMap.classList.remove("modal-show");
       }
     }
   });
-}
+})();
+// -----------------------переключение слайдов--------
+//
+(function () {
+  if (!document.querySelector(".offer")) {
+    return;
+  }
+  var slide = document.querySelectorAll(".slider");
+  var buttonLeft = document.querySelector(".slider-button-left");
+  var buttonRight = document.querySelector(".slider-button-right");
+
+  var buttonLabel = document.querySelectorAll(".button-label");
+  var buttonFirst = document.querySelector(".slider-button-first");
+  var buttonSecond = document.querySelector(".slider-button-second");
+
+  for (var j = 0; j < slide.length; j++) {
+    subscribe(j);
+  }
+
+  function subscribe(j) {
+    var button = buttonLabel[j];
+    button.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      if (!button.classList.contains("button-checked")) {
+        for (var i = 0; i < slide.length; i++) {
+          slide[i].classList.toggle("slider-checked");
+          buttonLabel[i].classList.toggle("button-checked");
+        }
+      }
+    });
+  }
 
 // ---------------nige rabotaet---------------------------------------
 
@@ -151,27 +158,28 @@ function subscribe(j) {
 //   }
 // });
 
-  buttonLeft.addEventListener("click", function(evt) {
+  buttonLeft.addEventListener("click", function (evt) {
     evt.preventDefault();
-    for (var i=0; i < slide.length; i++){
+    for (var i = 0; i < slide.length; i++) {
       slide[i].classList.toggle("slider-checked");
       buttonLabel[i].classList.toggle("button-checked");
     }
-});
+  });
 
-buttonRight.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  for (var i=0; i < slide.length; i++)
-    {
+  buttonRight.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var i = 0; i < slide.length; i++) {
       slide[i].classList.toggle("slider-checked");
       buttonLabel[i].classList.toggle("button-checked");
     }
-});
-}) ();
+  });
+})();
 
 // --------------------service-----------------------------
 (function () {
-
+  if (!document.querySelector(".services")) {
+    return;
+  }
 
   var buttonDelivery = document.querySelector(".button-delivery");
   var buttonWarranty = document.querySelector(".button-warranty");
@@ -220,48 +228,49 @@ buttonRight.addEventListener("click", function(evt) {
       metkaButton = buttonCredit;
     }
   });
-}) ();
+})();
 
 
 // ---------popupCatalog---------------------------------
-//
-// (function () {
-//
-//
-//   var popupCatalog = document.querySelector(".modal-message");
-//   var buttonCatalog = document.querySelectorAll(".button-buy");
-//   var closeCatalog = popupCatalog.querySelector(".close");
-//   var continueCatalog = popupCatalog.querySelector(".continue");
-//   var checkoutCatalog = popupCatalog.querySelector(".button");
-//
-//   for (var i = 0; i < buttonCatalog.length; i++) {
-//     buttonCatalog[i].addEventListener("click", function (evt) {
-//       evt.preventDefault();
-//       popupCatalog.classList.add("modal-show");
-//     });
-//   }
-//
-//   checkoutCatalog.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     popupCatalog.classList.remove("modal-show");
-//   });
-//
-//   closeCatalog.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     popupCatalog.classList.remove("modal-show");
-//   });
-//
-//   continueCatalog.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     popupCatalog.classList.remove("modal-show");
-//   });
-//
-//   window.addEventListener("keydown", function (evt) {
-//     if (evt.keyCode === 27) {
-//       evt.preventDefault();
-//       if (popupCatalog.classList.contains("modal-show")) {
-//         popupCatalog.classList.remove("modal-show");
-//       }
-//     }
-//   });
-// }) ();
+(function () {
+
+  var popupCatalog = document.querySelector(".modal-message");
+  if (!popupCatalog) {
+    return;
+  }
+  var buttonCatalog = document.querySelectorAll(".button-buy");
+  var closeCatalog = popupCatalog.querySelector(".close");
+  var continueCatalog = popupCatalog.querySelector(".continue");
+  var checkoutCatalog = popupCatalog.querySelector(".button");
+
+  for (var i = 0; i < buttonCatalog.length; i++) {
+    buttonCatalog[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popupCatalog.classList.add("modal-show");
+    });
+  }
+
+  checkoutCatalog.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupCatalog.classList.remove("modal-show");
+  });
+
+  closeCatalog.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupCatalog.classList.remove("modal-show");
+  });
+
+  continueCatalog.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupCatalog.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popupCatalog.classList.contains("modal-show")) {
+        popupCatalog.classList.remove("modal-show");
+      }
+    }
+  });
+})();
