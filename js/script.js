@@ -72,7 +72,7 @@
     }
   });
 })();
-// ------------------------карта------------
+
 (function () {
   var popupMap = document.querySelector(".modal-map");
   if (!popupMap) {
@@ -102,8 +102,7 @@
     }
   });
 })();
-// -----------------------переключение слайдов--------
-//
+
 (function () {
   if (!document.querySelector(".offer")) {
     return;
@@ -133,31 +132,6 @@
     });
   }
 
-// ---------------nige rabotaet---------------------------------------
-
-// buttonFirst.addEventListener("click", function(evt) {
-//   evt.preventDefault();
-//   if (!buttonFirst.classList.contains("button-checked"))
-//   {
-//     for (var i=0; i < slide.length; i++) {
-//       slide[i].classList.toggle("slider-checked");
-//       buttonLabel[i].classList.toggle("button-checked");
-//     }
-//   }
-// });
-//
-// buttonSecond.addEventListener("click", function(evt) {
-//   evt.preventDefault();
-//
-//   if (!buttonSecond.classList.contains("button-checked"))
-//   {
-//     for (var i=0; i < slide.length; i++) {
-//       slide[i].classList.toggle("slider-checked");
-//       buttonLabel[i].classList.toggle("button-checked");
-//     }
-//   }
-// });
-
   buttonLeft.addEventListener("click", function (evt) {
     evt.preventDefault();
     for (var i = 0; i < slide.length; i++) {
@@ -175,7 +149,6 @@
   });
 })();
 
-// --------------------service-----------------------------
 (function () {
   if (!document.querySelector(".services")) {
     return;
@@ -230,8 +203,6 @@
   });
 })();
 
-
-// ---------popupCatalog---------------------------------
 (function () {
 
   var popupCatalog = document.querySelector(".modal-message");

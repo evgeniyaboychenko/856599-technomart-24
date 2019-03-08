@@ -16,9 +16,8 @@
           <img src="img/svg/technomart-logo.svg" alt="Логотип компании техномарт" width="110" height="18">
         </a>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <input class="search" type="search" id="searching" placeholder="Перфоратор">
-          <label for="searching">
-            <span>Поиск:</span>
+          <input class="search" type="search" id="searching" placeholder="Поиск:">
+          <label for="searching" aria-label="Поиск">
           </label>
         </form>
         <ul class="earmarked-list">
@@ -46,7 +45,7 @@
         <ul class="site-navigation">
           <li class="site-navigation-item"><a>Главная</a></li>
           <li class="site-navigation-item"><a href="#">Компания</a></li>
-          <li class="site-navigation-item"><a href="#">Каталог</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
           <li class="site-navigation-item"><a href="#">Новости</a></li>
           <li class="site-navigation-item"><a href="#">Спецпредложения</a></li>
           <li class="site-navigation-item"><a href="#">Доставка</a></li>
@@ -119,9 +118,7 @@
               <img src="img/perforator_1.jpg" alt="Перфоратор Bosch модель BFG 9000" width="218" height="170">
             </div>
             <del class="old-price">32500 р.</del>
-            <div class="arrow">
-              <p class="price">25500 р.</p>
-            </div>
+            <div class="arrow">25900 р.</div>
           </li>
           <li class="products-item">
             <h3>Перфоратор BOSCH BFG 3000</h3>
@@ -129,9 +126,7 @@
               <img src="img/perforator_2.jpg" alt="Перфоратор Bosch модель BFG 3000" width="218" height="170">
             </div>
             <del class="old-price">22500 р.</del>
-            <div class="arrow">
-              <p class="price">15500 р.</p>
-            </div>
+            <div class="arrow">15500 р.</div>
           </li>
           <li class="products-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
@@ -139,19 +134,14 @@
               <img src="img/perforator_3.jpg" alt="Перфоратор Bosch модель BFG 6000" width="218" height="170">
             </div>
             <del class="old-price">30500 р.</del>
-            <div class="arrow">
-              <p class="price">25500 р.</p>
-            </div>
+            <div class="arrow">25500 р.</div>
           </li>
           <li class="products-item new-label">
             <h3>Перфоратор BOSCH BFG 2000</h3>
-            <!--<span class="new-label"></span>-->
             <div class="img-item">
               <img src="img/perforator_4.jpg" alt="Перфоратор Bosch модель BFG 2000" width="218" height="170">
             </div>
-            <div class="arrow">
-              <p class="price">12500 р.</p>
-            </div>
+            <div class="arrow">12500 р.</div>
           </li>
         </ul>
       </section>
@@ -308,7 +298,7 @@
         </p>
         <div class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
-          <ul>
+          <ul class="footer-social-list">
             <li>
               <a class="social-button social-button-vk" href="#">
                 <span class="visually-hidden">ВКонтакте</span>
@@ -338,7 +328,6 @@
     </div>
   </footer>
 
-
   <section class="modal modal-write-us">
     <h2 class="visually-hidden">Ваши контактные данные</h2>
     <form class="form-modal-write-us" action="https://echo.htmlacademy.ru" method="post">
@@ -365,7 +354,6 @@
     </button>
   </section>
 
-
   <section class="modal modal-map">
     <h2 class="visually-hidden">Наш адрес на карте</h2>
     <iframe src="https://yandex.ru/map-widget/v1/-/CCU9m6-F" width="940" height="446"
@@ -380,6 +368,4 @@
   </section>
   <script src="js/script-min.js"></script>
 </body>
-
-
 </html>
