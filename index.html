@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style-min.css" rel="stylesheet">
 </head>
@@ -15,11 +14,13 @@
         <a class="main-header-logo" aria-label="Логотип компании техномарт">
           <img src="img/svg/technomart-logo.svg" alt="Логотип компании техномарт" width="110" height="18">
         </a>
-        <form action="https://echo.htmlacademy.ru" method="get">
+
+        <form class="search-site" action="https://echo.htmlacademy.ru" method="get">
           <input class="search" type="search" id="searching" placeholder="Поиск:">
           <label for="searching" aria-label="Поиск">
           </label>
         </form>
+
         <ul class="earmarked-list">
           <li><a class="bookmarks" href="#">Закладки: 0</a></li>
           <li><a class="cart" href="#">Корзина: 0</a></li>
@@ -102,8 +103,7 @@
         <button class="slider-button-left" type="button" aria-label="Влево"></button>
         <button class="slider-button-right" type="button" aria-label="Вправо"></button>
         <button class="slider-button-first button-label" type="button" aria-label="Первый слайд"></button>
-        <button class="slider-button-second button-label button-checked" type="button"
-                aria-label="Второй слайд"></button>
+        <button class="slider-button-second button-label button-checked" type="button" aria-label="Второй слайд"></button>
       </section>
 
       <section class="popular-products">
@@ -145,6 +145,7 @@
           </li>
         </ul>
       </section>
+
       <section class="brands">
         <div class="popular-header">
           <h2 class="subtitle">Популярные производители:</h2>
@@ -152,25 +153,19 @@
         </div>
         <ul class="brands-list">
           <li class="brands-item">
-            <a href="#">
-              <img src="img/brands/bosch.jpg" alt="Логотип производителя Bosh" width="126" height="37">
-            </a>
+            <a href="#"><img src="img/brands/bosch.jpg" alt="Логотип производителя Bosh" width="126" height="37"></a>
           </li>
           <li class="brands-item">
-            <a href="#"><img src="img/brands/makita.jpg" alt="Логотип производителя Makita" width="123"
-                             height="40"></a>
+            <a href="#"><img src="img/brands/makita.jpg" alt="Логотип производителя Makita" width="123" height="40"></a>
           </li>
           <li class="brands-item">
-            <a href="#"><img src="img/brands/dewalt.jpg" alt="Логотип производителя Dewalt" width="146"
-                             height="44"></a>
+            <a href="#"><img src="img/brands/dewalt.jpg" alt="Логотип производителя Dewalt" width="146" height="44"></a>
           </li>
           <li class="brands-item">
-            <a href="#"><img src="img/brands/interscol.jpg" alt="Логотип производителя Интерскол" width="200"
-                             height="88"></a>
+            <a href="#"><img src="img/brands/interscol.jpg" alt="Логотип производителя Интерскол" width="200" height="88"></a>
           </li>
           <li class="brands-item">
-            <a href="#"><img src="img/brands/hitachi.jpg" alt="Логотип производителя Hitachi" width="169"
-                             height="31"></a>
+            <a href="#"><img src="img/brands/hitachi.jpg" alt="Логотип производителя Hitachi" width="169" height="31"></a>
           </li>
           <li class="brands-item">
             <a href="#"><img src="img/brands/lg.jpg" alt="Логотип производителя LG" width="121" height="73"></a>
@@ -179,20 +174,18 @@
             <a href="#"><img src="img/brands/aeg.jpg" alt="Логотип производителя AEG" width="151" height="96"></a>
           </li>
           <li class="brands-item">
-            <a href="#"><img src="img/brands/metabo.jpg" alt="Логотип производителя Metabo" width="204"
-                             height="69"></a>
+            <a href="#"><img src="img/brands/metabo.jpg" alt="Логотип производителя Metabo" width="204" height="69"></a>
           </li>
         </ul>
       </section>
     </div>
-
 
     <div class="services-wrapper">
       <div class="container">
         <section class="services">
           <h2 class="subtitle services-subtitle">Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать
-            ваши покупки приятными</p>
+            ваши покупки приятными.</p>
           <div class="services-column">
             <ul class="service-button-list">
               <li class="service-button-item">
@@ -208,21 +201,21 @@
 
             <section class="service service-delivery service-show">
               <h3 class="service-subtitle">Доставка</h3>
-              <p>Мы с удовольстием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!</p>
+              <p>Мы с удовольстием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!</p>
               <p>Ведь мы не плохо заработаем,<br>поднимая его на ваш этаж!</p>
             </section>
 
             <section class="service service-warranty">
               <h3 class="service-subtitle">Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит,<br>
-                а также в случае пожара, спровоцированного его возгаранием,вы всегда можете быть уверены в нашей
-                гарантии.
-                Мы обменяем сгоревший товар на новый.
-                <br>Дом уж восстановите как-нибудь сами.</p>
+                а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
             </section>
 
             <section class="service service-credit">
-              <h3 class="service-subtitle">кредит</h3>
+              <h3 class="service-subtitle">Кредит</h3>
               <p>Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
               </p>
@@ -236,10 +229,11 @@
     <div class="columns-company container">
       <section class="about-company">
         <h2 class="subtitle about-company-subtitle">Компания &laquo;Техномарт&raquo;</h2>
-        <p>Настоящий мужской шоппинг начинается здесь!Огромный выбор товаров для ремонта и строительства не оставит
-          равнодушными любителей сэкономить на гастарбайтерах</p>
+        <p>Настоящий мужской шоппинг начинается здесь!Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+        </p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-          Техномарт работает со многоми транспортными компаниями:</p>
+          Техномарт работает со многоми транспортными компаниями:
+        </p>
         <ul class="transport-companies">
           <li><a href="#">Деловые линии</a></li>
           <li><a href="#">Автотрейдинг</a></li>
@@ -251,7 +245,8 @@
       <section class="main-contacts">
         <h2 class="subtitle about-company-subtitle">Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
-          заехав в наш офис:</p>
+          заехав в наш офис:
+        </p>
         <a class="main-contacts-map" href="https://yandex.ru/maps/-/CBR2VBqH1D">
           <img src="img/map.jpg" alt="Карта проезда до офиса" width="300" height="158">
         </a>
@@ -356,11 +351,9 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Наш адрес на карте</h2>
-    <iframe src="https://yandex.ru/map-widget/v1/-/CCU9m6-F" width="940" height="446"
-            allowfullscreen></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CCU9m6-F" width="940" height="446" allowfullscreen></iframe>
     <p>
-      <img src="img/map-fullscreen.jpg" width="940" height="446"
-           alt="Карта офиса по адресу:Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
+      <img src="img/map-fullscreen.jpg" width="940" height="446" alt="Карта офиса по адресу:Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
     </p>
     <button class="close" type="button" aria-label="Закрыть модальное окно">
       <img src="img/svg/icon-close.svg" alt="Закрыть" width="21" height="21">
